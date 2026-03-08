@@ -7,7 +7,7 @@ document.getElementById("login-btn").addEventListener("click",function(){
     const password=passwordInput.value
    
     if(User=='admin'&&password=='admin123'){
-        window.location.assign("/main.html")
+        window.location.assign("./main.html")
     }
     else{
         alert("sorry");
