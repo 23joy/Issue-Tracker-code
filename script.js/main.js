@@ -2,6 +2,10 @@ let currentTab='all';
 const tabActive=["bg-[#4A00FF]",'border-blue-900',"text-white"]
 const tabInActive=["bg-white","text-slate-700","border-slate-200"];
 
+const countIssue=document.getElementById("count-issue")
+countIssue=innerText.value;
+console.log(countIssue)
+
 function switchTab(tab){
     currentTab=tab;
 
@@ -37,42 +41,15 @@ const loadWordDetail=async(id)=>{
     const details=await res.json();
     displayWordDetails(details.data);
 };
-// assignee
-// : 
-// "jane_smith"
-// author
-// : 
-// "john_doe"
-// createdAt
-// : 
-// "2024-01-15T10:30:00Z"
-// description
-// : 
-// "The navigation menu doesn't collapse properly on mobile devices. Need to fix the responsive behavior."
-// id
-// : 
-// 1
-// labels
-// : 
-// (2) ['bug', 'help wanted']
-// priority
-// : 
-// "high"
-// status
-// : 
-// "open"
-// title
-// : 
-// "Fix navigation menu on mobile devices"
 
 const displayWordDetails=(word)=>{
     console.log(word)
     const detailsContainer=document.getElementById("details-container")
     detailsContainer.innerHTML=`
      <h2 class="font-bold text-6 text-[#1F2937]">${word.title}</h2>
-        <div>
+        <div class="flex gap-3 items-center">
             <button class="btn btn-success rounded-3xl">Opened</button>
-            <ul>
+            <ul class="flex gap-1 ">
                 <li>Opened by Fahim Ahmed</li>
                 <li>${word.updatedAt}</li>
             </ul>
