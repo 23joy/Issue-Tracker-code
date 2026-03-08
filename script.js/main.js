@@ -1,5 +1,5 @@
 let currentTab='all';
-const tabActive=["bg-blue-900",'border-blue-900',"text-white"]
+const tabActive=["bg-[#4A00FF]",'border-blue-900',"text-white"]
 const tabInActive=["bg-white","text-slate-700","border-slate-200"];
 function switchTab(tab){
     currentTab=tab;
